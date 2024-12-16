@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-12-16T18:54:50.267Z",
+    "end": "2024-12-16T18:54:56.054Z",
+    "duration": 5787,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c9611a26-f68f-49a2-bfa6-efd6958c2577",
+      "title": "",
+      "fullFile": "cypress\\e2e\\agenda-contatos\\home.cy.js",
+      "file": "cypress\\e2e\\agenda-contatos\\home.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c0ff69e2-7ca5-44d2-93c2-fe2633e125df",
+          "title": "Testes para a home",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve renderizar 3 contatos e um campo para adicionar",
+              "fullTitle": "Testes para a home Deve renderizar 3 contatos e um campo para adicionar",
+              "timedOut": null,
+              "duration": 1231,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.sc-beqWaB').should('have.length', 3);\ncy.get('input').should('have.length', 3);\ncy.get('.adicionar').should('have.length', 1);\ncy.screenshot('tela-inicial');",
+              "err": {},
+              "uuid": "4856ee5d-b923-4d2b-a852-b30748a3bd7e",
+              "parentUUID": "c0ff69e2-7ca5-44d2-93c2-fe2633e125df",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve adicionar um contato",
+              "fullTitle": "Testes para a home Deve adicionar um contato",
+              "timedOut": null,
+              "duration": 1629,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[type=\"text\"]').type('Lucas Ezequiel');\ncy.get('[type=\"email\"]').type('email@gmail.com');\ncy.get('[type=\"tel\"]').type('11 91234-1234');\ncy.get('.adicionar').click();\ncy.get('.sc-beqWaB').should('have.length', 4);\ncy.screenshot('contato-adicionado');",
+              "err": {},
+              "uuid": "4507e25b-9dd9-4de4-a98d-9bbcca91ae2b",
+              "parentUUID": "c0ff69e2-7ca5-44d2-93c2-fe2633e125df",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve alterar o contado",
+              "fullTitle": "Testes para a home Deve alterar o contado",
+              "timedOut": null,
+              "duration": 1178,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(':nth-child(5) > .sc-gueYoa > .edit').click();\ncy.get('[type=\"text\"]').clear().type('Gabriel Ezequiel');\ncy.get('[type=\"tel\"]').clear().type('11 94321-4321');\ncy.get('.alterar').click();",
+              "err": {},
+              "uuid": "c7cb4c97-ac3e-4d2d-a576-79baa2fb4ebb",
+              "parentUUID": "c0ff69e2-7ca5-44d2-93c2-fe2633e125df",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve excluir o contato",
+              "fullTitle": "Testes para a home Deve excluir o contato",
+              "timedOut": null,
+              "duration": 345,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(':nth-child(5) > .sc-gueYoa > .delete').click();",
+              "err": {},
+              "uuid": "76dce786-e194-4e54-947e-be1a974d9d9d",
+              "parentUUID": "c0ff69e2-7ca5-44d2-93c2-fe2633e125df",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4856ee5d-b923-4d2b-a852-b30748a3bd7e",
+            "4507e25b-9dd9-4de4-a98d-9bbcca91ae2b",
+            "c7cb4c97-ac3e-4d2d-a576-79baa2fb4ebb",
+            "76dce786-e194-4e54-947e-be1a974d9d9d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4383,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/relatorio",
+        "overwrite": true,
+        "html": true,
+        "JSON": false,
+        "timestamp": "ddmmyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
